@@ -1,0 +1,71 @@
+:root {
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "JetBrains Mono", monospace;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+body {
+	line-height: 1.6;
+}
+
+#container {
+  background-color: #936cad;
+  color: #4dbcf0;
+  width: 100dvw;
+  height: 100dvh;
+  max-width: 100dvw;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+.counter__current {
+  font-size: 8rem; 
+}
+
+.counter__persec {
+  font-size: 4rem; 
+}
+
+.playarea {
+  height: 50dvh;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.playarea__cliker {
+  height: 60%;
+  transition: all .1s;
+}
+
+.playarea__cliker:active {
+  transform: scale(0.9);
+}
+
+.powerups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr; 
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.powerup {
+  background-color: #784894;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+}
