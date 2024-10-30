@@ -1,0 +1,109 @@
+:root {
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "JetBrains Mono", monospace;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; 
+}
+
+body {
+	line-height: 1.6;
+}
+
+.counter {
+  &__current {
+    @debug &;
+    font-size: 8rem;
+    color: rgb(0, 255, 191);
+  }
+  &__persec {
+    font-size: 4rem; 
+    color: rgb(0, 255, 191);
+  }
+}
+
+#container {
+  background-color: #7850e6;
+  color: #4dbcf0;
+  width: 100dvw;
+  height: 100dvh;
+  max-width: 100dvw;
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+.playarea {
+  height: 50dvh;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  &__cliker {
+    height: 60%;
+    transition: all .1s;
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
+
+.powerups {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr; 
+  gap: 1rem;
+  padding: 1rem;
+  
+}
+
+.powerup {
+  background-color: #7f00d3;
+  font-size: 1.25rem;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #5b0594;
+  }
+
+  display: grid;
+  gap: .4rem;
+  grid-template-columns: repeat(3, auto);
+
+  &__title {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  &__price {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-self: end;
+  }
+
+  &__amount {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    font-size: 5rem;
+    justify-self: end;
+    align-self: center;
+  }
+
+  .profit {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    align-self: end;
+  }
+}
